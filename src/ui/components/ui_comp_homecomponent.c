@@ -298,7 +298,7 @@ lv_obj_t *ui_homeComponent_create(lv_obj_t *comp_parent)
 
     lv_obj_t *cui_homeComponent;
     cui_homeComponent = lv_obj_create(ui_homeScreen);
-    lv_obj_set_width(cui_homeComponent, 272);
+    lv_obj_set_width(cui_homeComponent, lv_pct(85));
     lv_obj_set_height(cui_homeComponent, lv_pct(100));
     lv_obj_set_x(cui_homeComponent, 386);
     lv_obj_set_y(cui_homeComponent, 178);
@@ -321,7 +321,7 @@ lv_obj_t *ui_homeComponent_create(lv_obj_t *comp_parent)
 
     lv_obj_t *cui_mainScreenLeft;
     cui_mainScreenLeft = lv_obj_create(cui_homeComponent);
-    lv_obj_set_width(cui_mainScreenLeft, 200);
+    lv_obj_set_width(cui_mainScreenLeft, lv_pct(75));
     lv_obj_set_height(cui_mainScreenLeft, lv_pct(100));
     lv_obj_set_x(cui_mainScreenLeft, 386);
     lv_obj_set_y(cui_mainScreenLeft, 178);
@@ -344,7 +344,7 @@ lv_obj_t *ui_homeComponent_create(lv_obj_t *comp_parent)
 
     lv_obj_t *cui_mainScreenStatusBar;
     cui_mainScreenStatusBar = lv_obj_create(cui_mainScreenLeft);
-    lv_obj_set_height(cui_mainScreenStatusBar, 28);
+    lv_obj_set_height(cui_mainScreenStatusBar, lv_pct(12));
     lv_obj_set_width(cui_mainScreenStatusBar, lv_pct(100));
     lv_obj_set_x(cui_mainScreenStatusBar, 386);
     lv_obj_set_y(cui_mainScreenStatusBar, 178);
@@ -609,8 +609,8 @@ lv_obj_t *ui_homeComponent_create(lv_obj_t *comp_parent)
     lv_slider_set_value(cui_mainScreenProgressBar, 60, LV_ANIM_OFF);
     if (lv_slider_get_mode(cui_mainScreenProgressBar) == LV_SLIDER_MODE_RANGE)
         lv_slider_set_left_value(cui_mainScreenProgressBar, 0, LV_ANIM_OFF);
-    lv_obj_set_width(cui_mainScreenProgressBar, 146);
-    lv_obj_set_height(cui_mainScreenProgressBar, 14);
+    lv_obj_set_width(cui_mainScreenProgressBar, 384);
+    lv_obj_set_height(cui_mainScreenProgressBar, 28);
     lv_obj_set_align(cui_mainScreenProgressBar, LV_ALIGN_CENTER);
     lv_obj_set_flex_flow(cui_mainScreenProgressBar, LV_FLEX_FLOW_ROW);
     lv_obj_set_flex_align(cui_mainScreenProgressBar, LV_FLEX_ALIGN_SPACE_EVENLY, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER);
@@ -783,7 +783,7 @@ lv_obj_t *ui_homeComponent_create(lv_obj_t *comp_parent)
 
     lv_obj_t *cui_mainScreenRight;
     cui_mainScreenRight = lv_obj_create(cui_homeComponent);
-    lv_obj_set_width(cui_mainScreenRight, 72);
+    lv_obj_set_width(cui_mainScreenRight, lv_pct(25));
     lv_obj_set_height(cui_mainScreenRight, lv_pct(100));
     lv_obj_set_x(cui_mainScreenRight, 386);
     lv_obj_set_y(cui_mainScreenRight, 178);
@@ -844,7 +844,7 @@ lv_obj_t *ui_homeComponent_create(lv_obj_t *comp_parent)
 
     lv_obj_t *cui_mainScreenTemps;
     cui_mainScreenTemps = lv_obj_create(cui_mainScreenRight);
-    lv_obj_set_height(cui_mainScreenTemps, 180);
+    lv_obj_set_height(cui_mainScreenTemps, 270);
     lv_obj_set_width(cui_mainScreenTemps, lv_pct(100));
     lv_obj_set_x(cui_mainScreenTemps, 386);
     lv_obj_set_y(cui_mainScreenTemps, 178);
