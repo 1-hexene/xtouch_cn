@@ -101,7 +101,7 @@ void xtouch_touch_setup()
         ConsoleInfo.println(F("[XTouch][TOUCH] Touch Setup"));
         int16_t x1, y1, x2, y2;
 
-        lv_label_set_text(introScreenCaption, "用触控笔点击  " LV_SYMBOL_PLUS "  来校准触摸");
+        lv_label_set_text(introScreenCaption, "点击  " LV_SYMBOL_PLUS "  来校准触摸");
         lv_timer_handler();
 
         // wait for no touch

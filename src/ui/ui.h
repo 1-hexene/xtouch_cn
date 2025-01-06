@@ -43,7 +43,7 @@ extern "C"
 
   lv_obj_t *introScreen;
   lv_obj_t *introScreenIcon;
-  lv_obj_t *introScreenQr;
+  // lv_obj_t *introScreenQr;
   lv_obj_t *introScreenCaption;
 
   lv_obj_t *ui_sidebarComponent;
@@ -84,7 +84,7 @@ extern "C"
   LV_FONT_DECLARE(ui_font_xlcdmin);
   LV_FONT_DECLARE(ui_font_xperiments);
   LV_FONT_DECLARE(ui_font_chinese_14);
-  LV_FONT_DECLARE(ui_font_chinese_28);
+  LV_FONT_DECLARE(ui_font_pingfang_22);
 
   void ui_init(void);
 
