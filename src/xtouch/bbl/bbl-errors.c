@@ -1,8 +1,9 @@
 #include "bbl-errors.h"
 
-int hms_error_length = 849;
+int hms_error_length = 850;
 
-const char *hms_error_keys[] PROGMEM = {"07FF700000020003",
+const char *hms_error_keys[] PROGMEM = {"0500050000010007",
+"07FF700000020003",
 "0700010000010001",
 "0700010000010003",
 "0700020000010001",
@@ -852,7 +853,8 @@ const char *hms_error_keys[] PROGMEM = {"07FF700000020003",
 "0300010000010007",
 "0300020000010007"};
 
-const char *hms_error_values[] PROGMEM = {"挤出机耗材耗尽，请送入新的耗材。",
+const char *hms_error_values[] PROGMEM = {"MQTT命令校验失败，请更新Studio或Handy。",
+"挤出机耗材耗尽，请送入新的耗材。",
 "AMS A 助力电机打滑，可能挤出轮磨损或耗材过细。",
 "AMS A 助力电机扭矩控制异常，可能是电流传感器故障。",
 "AMS A 耗材速度与长度计算错误，可能是里程轮传感器故障。",
