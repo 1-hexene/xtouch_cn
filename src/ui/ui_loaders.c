@@ -2,6 +2,16 @@
 #include "ui.h"
 #include "ui_msgs.h"
 
+#define XTOUCH_SCREEN_INTRO      -1
+#define XTOUCH_SCREEN_HOME        0
+#define XTOUCH_SCREEN_TEMPERATURE 1
+#define XTOUCH_SCREEN_CONTRL      2
+#define XTOUCH_SCREEN_FILAMENT    3
+#define XTOUCH_SCREEN_SETTINGS    4
+#define XTOUCH_SCREEN_PRINTERPAIR 5
+#define XTOUCH_SCREEN_ACCESSCODE  6
+
+
 void sendMqttMsg(int message, uint32_t data)
 {
     struct XTOUCH_MESSAGE_DATA eventData;
@@ -53,35 +63,35 @@ void loadScreen(int screen)
 
     switch (screen)
     {
-    case -1:
+    case XTOUCH_SCREEN_INTRO:
         ui_introScreen_screen_init();
         lv_disp_load_scr(introScreen);
         break;
-    case 0:
+    case XTOUCH_SCREEN_HOME:
         ui_homeScreen_screen_init();
         lv_disp_load_scr(ui_homeScreen);
         break;
-    case 1:
+    case XTOUCH_SCREEN_TEMPERATURE:
         ui_temperatureScreen_screen_init();
         lv_disp_load_scr(ui_temperatureScreen);
         break;
-    case 2:
+    case XTOUCH_SCREEN_CONTRL:
         ui_controlScreen_screen_init();
         lv_disp_load_scr(ui_controlScreen);
         break;
-    case 3:
+    case XTOUCH_SCREEN_FILAMENT:
         ui_filamentScreen_screen_init();
         lv_disp_load_scr(ui_filamentScreen);
         break;
-    case 4:
+    case XTOUCH_SCREEN_SETTINGS:
         ui_settingsScreen_screen_init();
         lv_disp_load_scr(ui_settingsScreen);
         break;
-    case 5:
+    case XTOUCH_SCREEN_PRINTERPAIR:
         ui_printerPairScreen_screen_init();
         lv_disp_load_scr(ui_printerPairScreen);
         break;
-    case 6:
+    case XTOUCH_SCREEN_ACCESSCODE:
         ui_accessCodeScreen_screen_init();
         lv_disp_load_scr(ui_accessCodeScreen);
         break;

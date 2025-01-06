@@ -42,17 +42,17 @@ void ui_introScreen_screen_init()
 
     lv_color_t bg_color = lv_palette_lighten(LV_PALETTE_LIGHT_BLUE, 5);
     lv_color_t fg_color = lv_palette_darken(LV_PALETTE_BLUE, 4);
-    introScreenQr = lv_qrcode_create(introScreen, 100, fg_color, bg_color);
+    //introScreenQr = lv_qrcode_create(introScreen, 100, fg_color, bg_color);
     // lv_qrcode_set_size(qr, 150);
     // lv_qrcode_set_dark_color(qr, fg_color);
     // lv_qrcode_set_light_color(qr, bg_color);
     /*Set data*/
-    const char * data = "https://gitee.com/meiziyang2023/xtouchumeko-version-tutorial";
-    lv_qrcode_update(introScreenQr, data, strlen(data));
-    lv_obj_center(introScreenQr);
+    //const char * data = "https://gitee.com/meiziyang2023/xtouchumeko-version-tutorial";
+    //lv_qrcode_update(introScreenQr, data, strlen(data));
+    //lv_obj_center(introScreenQr);
     /*Add a border with bg_color*/
-    lv_obj_set_style_border_color(introScreenQr, bg_color, 0);
-    lv_obj_set_style_border_width(introScreenQr, 5, 0);
+    //lv_obj_set_style_border_color(introScreenQr, bg_color, 0);
+    //lv_obj_set_style_border_width(introScreenQr, 5, 0);
 
     introScreenCaption = lv_label_create(introScreen);
     lv_obj_set_width(introScreenCaption, LV_SIZE_CONTENT);  /// 100
@@ -60,7 +60,7 @@ void ui_introScreen_screen_init()
     lv_label_set_text(introScreenCaption, LV_SYMBOL_SD_CARD);
     lv_obj_clear_flag(introScreenCaption, LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_GESTURE_BUBBLE | LV_OBJ_FLAG_SNAPPABLE | LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_SCROLL_ELASTIC | LV_OBJ_FLAG_SCROLL_MOMENTUM | LV_OBJ_FLAG_SCROLL_CHAIN); /// Flags
     lv_obj_set_scrollbar_mode(introScreenCaption, LV_SCROLLBAR_MODE_OFF);
-    lv_obj_set_style_text_font(introScreenCaption, &ui_font_chinese_14, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(introScreenCaption, &ui_font_pingfang_22, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_align(introScreenCaption, LV_TEXT_ALIGN_CENTER, 0);
     lv_obj_set_style_text_color(introScreenCaption, lv_color_hex(0x555555), LV_PART_MAIN | LV_STATE_DEFAULT);
 }
