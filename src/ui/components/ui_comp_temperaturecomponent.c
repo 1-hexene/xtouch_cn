@@ -597,7 +597,7 @@ lv_obj_t *ui_temperatureComponent_create(lv_obj_t *comp_parent)
     lv_obj_clear_flag(cui_temperatureComponentPartFanLabel, LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_GESTURE_BUBBLE | LV_OBJ_FLAG_SNAPPABLE | LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_SCROLL_ELASTIC | LV_OBJ_FLAG_SCROLL_MOMENTUM | LV_OBJ_FLAG_SCROLL_CHAIN); /// Flags
     lv_obj_set_scrollbar_mode(cui_temperatureComponentPartFanLabel, LV_SCROLLBAR_MODE_OFF);
     lv_obj_set_style_text_align(cui_temperatureComponentPartFanLabel, LV_TEXT_ALIGN_RIGHT, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(cui_temperatureComponentPartFanLabel, &ui_font_chinese_14, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(cui_temperatureComponentPartFanLabel, &ui_font_pingfang_22, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     lv_obj_t *cui_temperatureComponentPartFanValue;
     cui_temperatureComponentPartFanValue = lv_label_create(cui_temperatureComponentPartFan);
@@ -609,7 +609,7 @@ lv_obj_t *ui_temperatureComponent_create(lv_obj_t *comp_parent)
     lv_obj_clear_flag(cui_temperatureComponentPartFanValue, LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_GESTURE_BUBBLE | LV_OBJ_FLAG_SNAPPABLE | LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_SCROLL_ELASTIC | LV_OBJ_FLAG_SCROLL_MOMENTUM | LV_OBJ_FLAG_SCROLL_CHAIN); /// Flags
     lv_obj_set_scrollbar_mode(cui_temperatureComponentPartFanValue, LV_SCROLLBAR_MODE_OFF);
     lv_obj_set_style_text_align(cui_temperatureComponentPartFanValue, LV_TEXT_ALIGN_RIGHT, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(cui_temperatureComponentPartFanValue, &ui_font_chinese_14, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(cui_temperatureComponentPartFanValue, &ui_font_pingfang_22, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     lv_obj_t *cui_temperatureComponentPartFanInput;
     cui_temperatureComponentPartFanInput = lv_textarea_create(cui_temperatureComponentPartFan);
@@ -688,7 +688,7 @@ lv_obj_t *ui_temperatureComponent_create(lv_obj_t *comp_parent)
     lv_obj_clear_flag(cui_temperatureComponentAuxFanLabel, LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_GESTURE_BUBBLE | LV_OBJ_FLAG_SNAPPABLE | LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_SCROLL_ELASTIC | LV_OBJ_FLAG_SCROLL_MOMENTUM | LV_OBJ_FLAG_SCROLL_CHAIN); /// Flags
     lv_obj_set_scrollbar_mode(cui_temperatureComponentAuxFanLabel, LV_SCROLLBAR_MODE_OFF);
     lv_obj_set_style_text_align(cui_temperatureComponentAuxFanLabel, LV_TEXT_ALIGN_RIGHT, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(cui_temperatureComponentAuxFanLabel, &ui_font_chinese_14, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(cui_temperatureComponentAuxFanLabel, &ui_font_pingfang_22, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     lv_obj_t *cui_temperatureComponentAuxFanValue;
     cui_temperatureComponentAuxFanValue = lv_label_create(cui_temperatureComponentAuxFan);
@@ -700,7 +700,7 @@ lv_obj_t *ui_temperatureComponent_create(lv_obj_t *comp_parent)
     lv_obj_clear_flag(cui_temperatureComponentAuxFanValue, LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_GESTURE_BUBBLE | LV_OBJ_FLAG_SNAPPABLE | LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_SCROLL_ELASTIC | LV_OBJ_FLAG_SCROLL_MOMENTUM | LV_OBJ_FLAG_SCROLL_CHAIN); /// Flags
     lv_obj_set_scrollbar_mode(cui_temperatureComponentAuxFanValue, LV_SCROLLBAR_MODE_OFF);
     lv_obj_set_style_text_align(cui_temperatureComponentAuxFanValue, LV_TEXT_ALIGN_RIGHT, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(cui_temperatureComponentAuxFanValue, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(cui_temperatureComponentAuxFanValue, &ui_font_pingfang_22, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     lv_obj_t *cui_temperatureComponentAuxFanInput;
     cui_temperatureComponentAuxFanInput = lv_textarea_create(cui_temperatureComponentAuxFan);
@@ -768,7 +768,7 @@ lv_obj_t *ui_temperatureComponent_create(lv_obj_t *comp_parent)
     lv_obj_set_style_text_color(cui_temperatureComponentChamberFanIcon, lv_color_hex(0xCCCCCC), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(cui_temperatureComponentChamberFanIcon, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_align(cui_temperatureComponentChamberFanIcon, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(cui_temperatureComponentChamberFanIcon, &ui_font_xlcd, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(cui_temperatureComponentChamberFanIcon, &ui_font_pingfang_22, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     lv_obj_t *cui_temperatureComponentChamberFanLabel;
     cui_temperatureComponentChamberFanLabel = lv_label_create(cui_temperatureComponentChamberFan);
@@ -779,7 +779,7 @@ lv_obj_t *ui_temperatureComponent_create(lv_obj_t *comp_parent)
     lv_obj_clear_flag(cui_temperatureComponentChamberFanLabel, LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_GESTURE_BUBBLE | LV_OBJ_FLAG_SNAPPABLE | LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_SCROLL_ELASTIC | LV_OBJ_FLAG_SCROLL_MOMENTUM | LV_OBJ_FLAG_SCROLL_CHAIN); /// Flags
     lv_obj_set_scrollbar_mode(cui_temperatureComponentChamberFanLabel, LV_SCROLLBAR_MODE_OFF);
     lv_obj_set_style_text_align(cui_temperatureComponentChamberFanLabel, LV_TEXT_ALIGN_RIGHT, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(cui_temperatureComponentChamberFanLabel, &ui_font_chinese_14, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(cui_temperatureComponentChamberFanLabel, &ui_font_pingfang_22, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     lv_obj_t *cui_temperatureComponentChamberFanValue;
     cui_temperatureComponentChamberFanValue = lv_label_create(cui_temperatureComponentChamberFan);
@@ -791,7 +791,7 @@ lv_obj_t *ui_temperatureComponent_create(lv_obj_t *comp_parent)
     lv_obj_clear_flag(cui_temperatureComponentChamberFanValue, LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_GESTURE_BUBBLE | LV_OBJ_FLAG_SNAPPABLE | LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_SCROLL_ELASTIC | LV_OBJ_FLAG_SCROLL_MOMENTUM | LV_OBJ_FLAG_SCROLL_CHAIN); /// Flags
     lv_obj_set_scrollbar_mode(cui_temperatureComponentChamberFanValue, LV_SCROLLBAR_MODE_OFF);
     lv_obj_set_style_text_align(cui_temperatureComponentChamberFanValue, LV_TEXT_ALIGN_RIGHT, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(cui_temperatureComponentChamberFanValue, &ui_font_chinese_14, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(cui_temperatureComponentChamberFanValue, &ui_font_pingfang_22, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     lv_obj_t *cui_temperatureComponentChamberFanInput;
     cui_temperatureComponentChamberFanInput = lv_textarea_create(cui_temperatureComponentChamberFan);

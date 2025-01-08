@@ -669,7 +669,7 @@ lv_obj_t *ui_homeComponent_create(lv_obj_t *comp_parent)
     lv_label_set_text(cui_mainScreenTimeLeft, "N/A");
     lv_obj_clear_flag(cui_mainScreenTimeLeft, LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_GESTURE_BUBBLE | LV_OBJ_FLAG_SNAPPABLE | LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_SCROLL_ELASTIC | LV_OBJ_FLAG_SCROLL_MOMENTUM | LV_OBJ_FLAG_SCROLL_CHAIN); /// Flags
     lv_obj_set_scrollbar_mode(cui_mainScreenTimeLeft, LV_SCROLLBAR_MODE_OFF);
-    lv_obj_set_style_text_font(cui_mainScreenTimeLeft, &ui_font_chinese_14, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(cui_mainScreenTimeLeft, &ui_font_pingfang_22, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     lv_obj_t *cui_mainScreenController2;
     cui_mainScreenController2 = lv_obj_create(cui_mainScreenPlayer);
@@ -712,7 +712,7 @@ lv_obj_t *ui_homeComponent_create(lv_obj_t *comp_parent)
     lv_label_set_text(cui_mainScreenLayer, "100/255");
     lv_obj_clear_flag(cui_mainScreenLayer, LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_GESTURE_BUBBLE | LV_OBJ_FLAG_SNAPPABLE | LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_SCROLL_ELASTIC | LV_OBJ_FLAG_SCROLL_MOMENTUM | LV_OBJ_FLAG_SCROLL_CHAIN); /// Flags
     lv_obj_set_scrollbar_mode(cui_mainScreenLayer, LV_SCROLLBAR_MODE_OFF);
-    lv_obj_set_style_text_font(cui_mainScreenLayer, &ui_font_chinese_14, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(cui_mainScreenLayer, &ui_font_pingfang_22, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     lv_obj_t *cui_mainScreenCentral;
     cui_mainScreenCentral = lv_obj_create(cui_mainScreenLeft);
@@ -778,8 +778,8 @@ lv_obj_t *ui_homeComponent_create(lv_obj_t *comp_parent)
     lv_obj_set_style_text_opa(lv_dropdown_get_list(cui_mainScreenSpeedDropDown), 255, LV_PART_SELECTED | LV_STATE_PRESSED);
     lv_obj_set_style_bg_color(lv_dropdown_get_list(cui_mainScreenSpeedDropDown), lv_color_hex(0x00AA00), LV_PART_SELECTED | LV_STATE_PRESSED);
     lv_obj_set_style_bg_opa(lv_dropdown_get_list(cui_mainScreenSpeedDropDown), 255, LV_PART_SELECTED | LV_STATE_PRESSED);
-    lv_obj_set_style_text_font(cui_mainScreenSpeedDropDown, &ui_font_chinese_14, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(lv_dropdown_get_list(cui_mainScreenSpeedDropDown), &ui_font_chinese_14, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(cui_mainScreenSpeedDropDown, &ui_font_pingfang_22, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(lv_dropdown_get_list(cui_mainScreenSpeedDropDown), &ui_font_pingfang_22, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     lv_obj_t *cui_mainScreenRight;
     cui_mainScreenRight = lv_obj_create(cui_homeComponent);

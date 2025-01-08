@@ -60,10 +60,7 @@ void setup()
 
   // xtouch_firmware_checkFirmwareUpdate();
 
-  xtouch_touch_setup();
-
-  while (!xtouch_wifi_setup())
-    ;
+  while (!xtouch_wifi_setup());
 
   // xtouch_firmware_checkOnlineFirmwareUpdate();
 
