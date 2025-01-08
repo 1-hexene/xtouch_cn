@@ -731,7 +731,7 @@ void xtouch_mqtt_connect()
 
     if (!xtouch_mqtt_firstConnectionDone)
     {
-        lv_label_set_text(introScreenCaption, LV_SYMBOL_CHARGE " Connecting to Cloud MQTT");
+        lv_label_set_text(introScreenCaption, LV_SYMBOL_CHARGE " 正在连接到拓竹云MQTT");
         lv_timer_handler();
         lv_task_handler();
         delay(32);

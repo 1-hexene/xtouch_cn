@@ -66,7 +66,7 @@ public:
       cfg.pin_vsync   = GPIO_NUM_41;
       cfg.pin_hsync   = GPIO_NUM_39;
       cfg.pin_pclk    = GPIO_NUM_42;
-      cfg.freq_write  = 15000000; // Why it works?
+        cfg.freq_write  = 15000000; // Why it works?
       //cfg.freq_write  = 17500000; // Why it works?
 
       cfg.hsync_polarity    = 0;
@@ -116,7 +116,7 @@ public:
 #endif
 
       cfg.freq       = 600000;
-      // TBD  cfg.i2c_addr   = 0x14;        // 0x5D , 0x14
+      cfg.i2c_addr   = 0x14;        // 0x5D , 0x14
       _touch_instance.config(cfg);
       _panel_instance.setTouch(&_touch_instance);
     }
@@ -129,8 +129,8 @@ public:
 #define screenHeight 480
 
 static lv_disp_draw_buf_t draw_buf; 
-static lv_color_t buf_1[screenWidth * screenHeight / 10];
-static lv_color_t buf_2[screenWidth * screenHeight / 10];
+static lv_color_t buf_1[screenWidth * screenHeight / 8];
+static lv_color_t buf_2[screenWidth * screenHeight / 8];
 
 LGFX tft;
 
