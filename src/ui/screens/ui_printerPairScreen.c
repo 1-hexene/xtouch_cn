@@ -1,6 +1,6 @@
 #include "../ui.h"
 
-/*
+
 void ui_event_printerPairScreenSubmitButton(lv_event_t *e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
@@ -10,7 +10,7 @@ void ui_event_printerPairScreenSubmitButton(lv_event_t *e)
         lv_msg_send(XTOUCH_ON_CLOUD_SELECT, NULL);
     }
 }
-*/
+
 
 void ui_printerPairScreen_screen_init(void)
 {
@@ -29,10 +29,10 @@ void ui_printerPairScreen_screen_init(void)
 
     lv_obj_t *ui_printerPairScreenCaption;
     ui_printerPairScreenCaption = lv_label_create(ui_printerPairScreen);
-    lv_obj_set_height(ui_printerPairScreenCaption, lv_pct(30));
+    lv_obj_set_height(ui_printerPairScreenCaption, lv_pct(15));
     lv_obj_set_width(ui_printerPairScreenCaption, lv_pct(100));
     //lv_label_set_text(ui_printerPairScreenCaption, "打印机配对");
-    lv_label_set_text(ui_printerPairScreenCaption, "连接无线局域网");
+    lv_label_set_text(ui_printerPairScreenCaption,  LV_SYMBOL_WIFI "连接无线局域网");
     lv_obj_set_style_text_align(ui_printerPairScreenCaption, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_font(ui_printerPairScreenCaption, &ui_font_pingfang_22, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_pad_left(ui_printerPairScreenCaption, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -67,7 +67,7 @@ void ui_printerPairScreen_screen_init(void)
     lv_obj_set_flex_align(ui_printerPairScreenSubmitButton, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER);
     lv_obj_add_flag(ui_printerPairScreenSubmitButton, LV_OBJ_FLAG_FLOATING);                                                                                                                                                                                                       /// Flags
     lv_obj_clear_flag(ui_printerPairScreenSubmitButton, LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_GESTURE_BUBBLE | LV_OBJ_FLAG_SNAPPABLE | LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_SCROLL_ELASTIC | LV_OBJ_FLAG_SCROLL_MOMENTUM | LV_OBJ_FLAG_SCROLL_CHAIN); /// Flags
-    lv_obj_set_scrollbar_mode(ui_printerPairScreenSubmitButton, LV_SCROLLBAR_MODE_ON);
+    lv_obj_set_scrollbar_mode(ui_printerPairScreenSubmitButton, LV_SCROLLBAR_MODE_OFF);
     lv_obj_set_style_bg_color(ui_printerPairScreenSubmitButton, lv_color_hex(0x22AF00), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(ui_printerPairScreenSubmitButton, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_border_width(ui_printerPairScreenSubmitButton, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -89,6 +89,6 @@ void ui_printerPairScreen_screen_init(void)
     lv_obj_set_style_text_opa(ui_printerPairScreenSubmitIcon, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_font(ui_printerPairScreenSubmitIcon, &ui_font_xlcd, LV_PART_MAIN | LV_STATE_DEFAULT);
 
-    //lv_obj_add_event_cb(ui_printerPairScreenSubmitButton, ui_event_printerPairScreenSubmitButton, LV_EVENT_ALL, NULL);
+    lv_obj_add_event_cb(ui_printerPairScreenSubmitButton, ui_event_printerPairScreenSubmitButton, LV_EVENT_ALL, NULL);
 
 }

@@ -1,5 +1,7 @@
 #define NO_SD
 
+//#define XTOUCH_DEBUG_INFO true
+
 #include <driver/i2s.h>
 #include <Arduino.h>
 #include <ArduinoJson.h>
@@ -43,9 +45,12 @@ void xtouch_intro_show(void)
 void setup()
 {
 
-#if XTOUCH_USE_SERIAL == true || XTOUCH_DEBUG_ERROR == true || XTOUCH_DEBUG_DEBUG == true || XTOUCH_DEBUG_INFO == true
-  Serial.begin(115200);
-#endif
+//#if XTOUCH_USE_SERIAL == true || XTOUCH_DEBUG_ERROR == true || XTOUCH_DEBUG_DEBUG == true || XTOUCH_DEBUG_INFO == true
+  
+  Serial0.begin(115200);
+  Serial0.println("Serial0");
+  
+//#endif
 
   xtouch_eeprom_setup();
   xtouch_globals_init();

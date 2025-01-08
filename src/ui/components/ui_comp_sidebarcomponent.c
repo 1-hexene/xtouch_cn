@@ -126,8 +126,8 @@ lv_obj_t *ui_sidebarComponent_create(lv_obj_t *comp_parent)
 
     lv_obj_t *cui_sidebarHomeButtonIcon;
     cui_sidebarHomeButtonIcon = lv_label_create(cui_sidebarHomeButton);
-    lv_obj_set_width(cui_sidebarHomeButtonIcon, LV_SIZE_CONTENT);  /// 100
-    lv_obj_set_height(cui_sidebarHomeButtonIcon, LV_SIZE_CONTENT); /// 24
+    lv_obj_set_width(cui_sidebarHomeButtonIcon, lv_pct(120));  /// 100
+    lv_obj_set_height(cui_sidebarHomeButtonIcon, lv_pct(29)); /// 24
     lv_label_set_text(cui_sidebarHomeButtonIcon, "a");
     lv_obj_clear_flag(cui_sidebarHomeButtonIcon, LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_GESTURE_BUBBLE | LV_OBJ_FLAG_SNAPPABLE | LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_SCROLL_ELASTIC | LV_OBJ_FLAG_SCROLL_MOMENTUM | LV_OBJ_FLAG_SCROLL_CHAIN); /// Flags
     lv_obj_set_scrollbar_mode(cui_sidebarHomeButtonIcon, LV_SCROLLBAR_MODE_OFF);
@@ -162,8 +162,8 @@ lv_obj_t *ui_sidebarComponent_create(lv_obj_t *comp_parent)
 
     lv_obj_t *cui_sidebarTempButtonIcon;
     cui_sidebarTempButtonIcon = lv_label_create(cui_sidebarTempButton);
-    lv_obj_set_width(cui_sidebarTempButtonIcon, LV_SIZE_CONTENT);  /// 100
-    lv_obj_set_height(cui_sidebarTempButtonIcon, LV_SIZE_CONTENT); /// 24
+    lv_obj_set_width(cui_sidebarTempButtonIcon, lv_pct(120));  /// 100
+    lv_obj_set_height(cui_sidebarTempButtonIcon, lv_pct(29)); /// 24
     lv_label_set_text(cui_sidebarTempButtonIcon, "b");
     lv_obj_clear_flag(cui_sidebarTempButtonIcon, LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_GESTURE_BUBBLE | LV_OBJ_FLAG_SNAPPABLE | LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_SCROLL_ELASTIC | LV_OBJ_FLAG_SCROLL_MOMENTUM | LV_OBJ_FLAG_SCROLL_CHAIN); /// Flags
     lv_obj_set_scrollbar_mode(cui_sidebarTempButtonIcon, LV_SCROLLBAR_MODE_OFF);
@@ -198,8 +198,8 @@ lv_obj_t *ui_sidebarComponent_create(lv_obj_t *comp_parent)
 
     lv_obj_t *cui_sidebarControlButtonIcon;
     cui_sidebarControlButtonIcon = lv_label_create(cui_sidebarControlButton);
-    lv_obj_set_width(cui_sidebarControlButtonIcon, LV_SIZE_CONTENT);  /// 100
-    lv_obj_set_height(cui_sidebarControlButtonIcon, LV_SIZE_CONTENT); /// 24
+    lv_obj_set_width(cui_sidebarControlButtonIcon, lv_pct(120));  /// 100
+    lv_obj_set_height(cui_sidebarControlButtonIcon, lv_pct(29)); /// 24
     lv_label_set_text(cui_sidebarControlButtonIcon, "c");
     lv_obj_clear_flag(cui_sidebarControlButtonIcon, LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_GESTURE_BUBBLE | LV_OBJ_FLAG_SNAPPABLE | LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_SCROLL_ELASTIC | LV_OBJ_FLAG_SCROLL_MOMENTUM | LV_OBJ_FLAG_SCROLL_CHAIN); /// Flags
     lv_obj_set_scrollbar_mode(cui_sidebarControlButtonIcon, LV_SCROLLBAR_MODE_OFF);
@@ -270,8 +270,8 @@ lv_obj_t *ui_sidebarComponent_create(lv_obj_t *comp_parent)
 
     lv_obj_t *cui_sidebarSettingsButtonIcon;
     cui_sidebarSettingsButtonIcon = lv_label_create(cui_sidebarSettingsButton);
-    lv_obj_set_width(cui_sidebarSettingsButtonIcon, LV_SIZE_CONTENT);  /// 100
-    lv_obj_set_height(cui_sidebarSettingsButtonIcon, LV_SIZE_CONTENT); /// 24
+    lv_obj_set_width(cui_sidebarSettingsButtonIcon, lv_pct(120));  /// 100
+    lv_obj_set_height(cui_sidebarSettingsButtonIcon, lv_pct(29)); /// 24
     lv_label_set_text(cui_sidebarSettingsButtonIcon, "d");
     lv_obj_clear_flag(cui_sidebarSettingsButtonIcon, LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_GESTURE_BUBBLE | LV_OBJ_FLAG_SNAPPABLE | LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_SCROLL_ELASTIC | LV_OBJ_FLAG_SCROLL_MOMENTUM | LV_OBJ_FLAG_SCROLL_CHAIN); /// Flags
     lv_obj_set_scrollbar_mode(cui_sidebarSettingsButtonIcon, LV_SCROLLBAR_MODE_OFF);

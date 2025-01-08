@@ -25,7 +25,7 @@ size_t XtouchAutoGrowBufferStream::write(uint8_t byte) {
         // Check if the buffer growing operation was successful
         if (tmp == NULL) {
             // Print an error message if buffer growth fails due to memory error
-            Serial.println("Failed to grow buffer");
+            Serial0.println("Failed to grow buffer");
             return 0; // Indicate failure to write
         }
 

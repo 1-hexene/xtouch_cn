@@ -86,10 +86,10 @@ void sendError(AsyncWebServerRequest *request, String desc)
 
 void xtouch_webserver_begin()
 {
-    Serial.println("Starting webserver...");
+    Serial0.println("Starting webserver...");
     if (!MDNS.begin("xtouch"))
     {
-        Serial.println("Error starting mDNS");
+        Serial0.println("Error starting mDNS");
         return;
     }
 
@@ -107,13 +107,13 @@ void xtouch_webserver_begin()
               
               if (error)
               {
-                  Serial.println("Failed to parse JSON");
+                  Serial0.println("Failed to parse JSON");
                   request->send(400, "text/plain", "Invalid JSON");
                   return;
               }
 
               String code = jsonDoc["verificationCode"].as<String>();
-              Serial.println("Received verification code: " + code);
+              Serial0.println("Received verification code: " + code);
               
               // Send confirmation response
               request->send(200, "text/plain", "Code received: " + code);
@@ -230,9 +230,9 @@ void xtouch_webserver_begin()
     server.begin();
 
     MDNS.addService("http", "tcp", 80);
-    Serial.println("Webserver started");
-    Serial.println("http://xtouch.local");
-    Serial.println(WiFi.localIP());
+    Serial0.println("Webserver started");
+    Serial0.println("http://xtouch.local");
+    Serial0.println(WiFi.localIP());
 }
 
 #endif

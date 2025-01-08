@@ -27,7 +27,7 @@ private:
 
   String _getAuthToken(String verificationCode = "")
   {
-    Serial.println("Getting accessToken from Bambu Cloud");
+    Serial0.println("Getting accessToken from Bambu Cloud");
     String url = _region == "China" ? "https://api.bambulab.cn/v1/user-service/user/login" : "https://api.bambulab.com/v1/user-service/user/login";
 
     HTTPClient http;
@@ -49,7 +49,7 @@ private:
     int httpResponseCode = http.POST(payload);
     if (httpResponseCode != 200)
     {
-      Serial.printf("Received error: %d\n", httpResponseCode);
+      Serial0.printf("Received error: %d\n", httpResponseCode);
       http.end();
       return "";
     }
@@ -90,7 +90,7 @@ private:
       return String((char *)output);
     }
 
-    Serial.println("Failed to decode base64");
+    Serial0.println("Failed to decode base64");
     return "";
   }
 
@@ -99,7 +99,7 @@ private:
     if (_region == "China"){
       DynamicJsonDocument wifiConfig = xtouch_filesystem_readJson(XTOUCH_FS, xtouch_paths_config);
       String user_id = "u_" + _decodeString(wifiConfig["user-id"].as<String>());
-      Serial.printf("User ID: %s\n", user_id.c_str());
+      Serial0.printf("User ID: %s\n", user_id.c_str());
       return user_id;
     }else{
       // User name is in the 2nd portion of the auth token (delimited with periods)
@@ -132,15 +132,15 @@ private:
 
         if (error)
         {
-          Serial.print(F("deserializeJson() failed: "));
-          Serial.println(error.f_str());
+          Serial0.print(F("deserializeJson() failed: "));
+          Serial0.println(error.f_str());
           return "";
         }
 
         return doc["username"].as<String>();
       }
 
-      Serial.println("Failed to decode base64");
+      Serial0.println("Failed to decode base64");
       return "";
     }
   }
@@ -156,7 +156,7 @@ public:
       return;
     }
     requestVerificationCodeRequested = true;
-    Serial.println("Requesting verification code from Bambu Cloud");
+    Serial0.println("Requesting verification code from Bambu Cloud");
     String url = _region == "China" ? "https://api.bambulab.cn/v1/user-service/user/sendemail/code" : "https://api.bambulab.com/v1/user-service/user/sendemail/code";
 
     HTTPClient http;
@@ -168,7 +168,7 @@ public:
     int httpResponseCode = http.POST(payload);
     if (httpResponseCode != 200)
     {
-      Serial.printf("Received error: %d\n", httpResponseCode);
+      Serial0.printf("Received error: %d\n", httpResponseCode);
       http.end();
       return;
     }
@@ -299,8 +299,8 @@ public:
 
   JsonArray getDeviceList()
   {
-    Serial.println(_region);
-    Serial.println("Getting device list from Bambu Cloud");
+    Serial0.println(_region);
+    Serial0.println("Getting device list from Bambu Cloud");
     String url = _region == "China" ? "https://api.bambulab.cn/v1/iot-service/api/user/bind" : "https://api.bambulab.com/v1/iot-service/api/user/bind";
 
     HTTPClient http;
@@ -312,7 +312,7 @@ public:
     int httpResponseCode = http.GET();
     if (httpResponseCode != 200)
     {
-      Serial.printf("Received error: %d\n", httpResponseCode);
+      Serial0.printf("Received error: %d\n", httpResponseCode);
       http.end();
       DynamicJsonDocument emptyDoc(1024);
       return emptyDoc.to<JsonArray>();
@@ -334,7 +334,7 @@ public:
   void updatePrivateFilaments()
   {
 
-    Serial.println("Getting Private Filament list from Bambu Cloud");
+    Serial0.println("Getting Private Filament list from Bambu Cloud");
     String url = (_region == "China") ? "https://api.bambulab.cn/v1/iot-service/api/slicer/setting?version=undefined" : "https://api.bambulab.com/v1/iot-service/api/slicer/setting?version=undefined";
 
     HTTPClient http;
@@ -372,8 +372,8 @@ public:
 
               if (err)
               {
-                Serial.print(F("deserializeJson() failed with code "));
-                Serial.println(err.c_str());
+                Serial0.print(F("deserializeJson() failed with code "));
+                Serial0.println(err.c_str());
                 client->stop();
                 return;
               }
@@ -454,7 +454,7 @@ public:
       }
       else
       {
-        Serial.printf("GET request failed, error: %s\n", http.errorToString(httpResponseCode).c_str());
+        Serial0.printf("GET request failed, error: %s\n", http.errorToString(httpResponseCode).c_str());
       }
     }
   }
@@ -497,7 +497,7 @@ public:
 
     if (devices.size() == 0)
     {
-      Serial.println("No devices found in Bambu Cloud");
+      Serial0.println("No devices found in Bambu Cloud");
 
       lv_label_set_text(introScreenCaption, LV_SYMBOL_CHARGE " 该账户旗下无打印机");
       lv_timer_handler();

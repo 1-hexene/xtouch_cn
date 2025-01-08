@@ -249,8 +249,8 @@ void xtouch_screen_touchRead(lv_indev_drv_t *indev_driver, lv_indev_data_t *data
         data->point.y = touchY;
 
         #if DEBUG_TOUCH !=0
-        Serial.print( "Data x " ); Serial.println( touchX );
-        Serial.print( "Data y " ); Serial.println( touchY );
+        Serial0.print( "Data x " ); Serial0.println( touchX );
+        Serial0.print( "Data y " ); Serial0.println( touchY );
         #endif
     }
     else
