@@ -66,7 +66,7 @@ int downloadFileToSDCard(const char *url, const char *fileName, void (*onProgres
         }
         else
         {
-            Serial.println("Failed to open file for writing");
+            Serial0.println("Failed to open file for writing");
         }
 
         if (otaMD5 != NULL && onMD5Check != NULL)

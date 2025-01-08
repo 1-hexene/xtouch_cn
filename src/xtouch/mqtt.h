@@ -622,7 +622,7 @@ void xtouch_mqtt_parseMessage(char *topic, byte *payload, unsigned int length, b
 
         if ((millis() - xtouch_mqtt_lastPushStatus) > (XTOUCH_MQTT_SERVER_PUSH_STATUS_TIMEOUT * 1000))
         {
-            Serial.println(F("[XTouch][MQTT] Force Reconnect after no Push Status for 30s"));
+            Serial0.println(F("[XTouch][MQTT] Force Reconnect after no Push Status for 30s"));
             xtouch_pubSubClient.disconnect();
         }
 
@@ -878,7 +878,7 @@ void xtouch_mqtt_loop()
     xtouch_pubSubClient.loop();
     if (!xtouch_pubSubClient.connected())
     {
-        Serial.println("π-----DISCONNECTED-----");
+        Serial0.println("π-----DISCONNECTED-----");
         xtouch_mqtt_connect();
         return;
     }

@@ -321,7 +321,7 @@ void xtouch_device_command_clean_print_error(void *s, lv_msg_t *m)
 // void xtouch_device_command_getPaCalibration()
 // {
 
-//     Serial.println("getPaCalibration");
+//     Serial0.println("getPaCalibration");
 //     DynamicJsonDocument doc(1024);
 //     doc["print"]["command"] = "extrusion_cali_get";
 //     doc["print"]["sequence_id"] = "456";
