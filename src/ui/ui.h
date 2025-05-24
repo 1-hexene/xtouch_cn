@@ -3,6 +3,10 @@
 #include <Arduino.h>
 #include "xtouch/errors.h"
 
+#ifdef __XTOUCH_SCREEN_28__
+#define UI_FONT_PINGFANG_22 0
+#endif
+
 #ifdef __cplusplus
 extern "C"
 {

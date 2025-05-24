@@ -34,7 +34,7 @@ void ui_printerPairScreen_screen_init(void)
     //lv_label_set_text(ui_printerPairScreenCaption, "打印机配对");
     lv_label_set_text(ui_printerPairScreenCaption,  LV_SYMBOL_WIFI "连接无线局域网");
     lv_obj_set_style_text_align(ui_printerPairScreenCaption, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui_printerPairScreenCaption, &ui_font_pingfang_22, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui_printerPairScreenCaption, &CHINESE_UI_FONT, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_pad_left(ui_printerPairScreenCaption, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_pad_right(ui_printerPairScreenCaption, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_pad_top(ui_printerPairScreenCaption, 20, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -48,7 +48,7 @@ void ui_printerPairScreen_screen_init(void)
     lv_obj_set_flex_grow(ui_printerPairScreenRoller, 10);
     lv_obj_set_x(ui_printerPairScreenRoller, 344);
     lv_obj_set_y(ui_printerPairScreenRoller, 193);
-    lv_obj_set_style_text_font(ui_printerPairScreenRoller, &ui_font_pingfang_22, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui_printerPairScreenRoller, &CHINESE_UI_FONT, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_radius(ui_printerPairScreenRoller, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_color(ui_printerPairScreenRoller, lv_color_hex(0x444444), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(ui_printerPairScreenRoller, 255, LV_PART_MAIN | LV_STATE_DEFAULT);

@@ -41,8 +41,8 @@ bool xtouch_wifi_setup()
         return false;
     }
 
-    String ssidB64String = xtouch_wifi_setup_decodeString(wifiConfig["ssid"].as<const char *>());
-    String ssidPWDString = xtouch_wifi_setup_decodeString(wifiConfig["pwd"].as<const char *>());
+    String ssidB64String = wifiConfig["ssid"].as<const char *>();
+    String ssidPWDString = wifiConfig["pwd"].as<const char *>();
 
     int timeout = wifiConfig.containsKey("timeout") ? wifiConfig["timeout"].as<int>() : 3000;
 

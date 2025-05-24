@@ -9,6 +9,10 @@
 // #include "date.h"
 #include "bbl-certs.h"
 
+#if defined(__XTOUCH_SCREEN_28__)
+#define Serial0 Serial
+#endif
+
 bool xtouch_cloud_pair_loop_exit = false;
 #if defined(NO_SD)
 #define XTOUCH_FS SPIFFS
@@ -98,7 +102,7 @@ private:
   {
     if (_region == "China"){
       DynamicJsonDocument wifiConfig = xtouch_filesystem_readJson(XTOUCH_FS, xtouch_paths_config);
-      String user_id = "u_" + _decodeString(wifiConfig["user-id"].as<String>());
+      String user_id = "u_" +wifiConfig["user-id"].as<String>();
       Serial0.printf("User ID: %s\n", user_id.c_str());
       return user_id;
     }else{
@@ -646,8 +650,8 @@ public:
     ConsoleLog.println(ESP.getFreeHeap());
     DynamicJsonDocument wifiConfig = xtouch_filesystem_readJson(XTOUCH_FS, xtouch_paths_config);
     _region = wifiConfig["cloud-region"].as<const char *>();
-    _email = _decodeString(wifiConfig["cloud-email"].as<String>());
-    _password = _decodeString(wifiConfig["cloud-password"].as<String>());
+    _email = wifiConfig["cloud-email"].as<String>();
+    _password = wifiConfig["cloud-password"].as<String>();
 
     DynamicJsonDocument doc = xtouch_filesystem_readJson(XTOUCH_FS, xtouch_paths_tokens, false, 2048);
     _auth_token = doc["authToken"].as<String>();

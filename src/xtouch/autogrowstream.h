@@ -1,6 +1,10 @@
 #ifndef XtouchAutoGrowBufferStream_h
 #define XtouchAutoGrowBufferStream_h
 
+#if defined(__XTOUCH_SCREEN_28__)
+#define Serial0 Serial
+#endif
+
 #include <Arduino.h>
 #include <Stream.h>
 

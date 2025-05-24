@@ -1,6 +1,7 @@
 #include "autogrowstream.h"
 #include <Arduino.h>
 
+
 #define BUFFER_INCREMENTS 128
 
 // Constructor for XtouchAutoGrowBufferStream

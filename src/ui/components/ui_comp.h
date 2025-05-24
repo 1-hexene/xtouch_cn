@@ -1,6 +1,12 @@
 #ifndef _UI_COMP__H
 #define _UI_COMP__H
 
+#ifdef __XTOUCH_SCREEN_28__
+#define CHINESE_UI_FONT ui_font_chinese_14
+#else
+#define CHINESE_UI_FONT ui_font_pingfang_22
+#endif
+
 #include "../ui.h"
 
 #ifdef __cplusplus
